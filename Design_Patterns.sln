@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainofResponsibility", "ChainofResponsibility\ChainofResponsibility.csproj", "{21640831-D981-4027-B86B-A496CA574020}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainofResponsibility", "ChainofResponsibility\ChainofResponsibility.csproj", "{21640831-D981-4027-B86B-A496CA574020}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreationalPatterns", "CreationalPatterns", "{FAECD689-B9A6-4AFA-9378-BEF41D7D8416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPattern", "FactoryPattern\FactoryPattern.csproj", "{F36BABAE-1DD1-4A17-81A5-56090CF53FDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{21640831-D981-4027-B86B-A496CA574020}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21640831-D981-4027-B86B-A496CA574020}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21640831-D981-4027-B86B-A496CA574020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F36BABAE-1DD1-4A17-81A5-56090CF53FDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F36BABAE-1DD1-4A17-81A5-56090CF53FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F36BABAE-1DD1-4A17-81A5-56090CF53FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F36BABAE-1DD1-4A17-81A5-56090CF53FDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F36BABAE-1DD1-4A17-81A5-56090CF53FDA} = {FAECD689-B9A6-4AFA-9378-BEF41D7D8416}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6594997-A9DF-48AD-9F3A-B23828DEF2BF}
