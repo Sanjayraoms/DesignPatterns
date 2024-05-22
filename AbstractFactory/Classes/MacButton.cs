@@ -11,7 +11,7 @@ namespace AbstractFactory.Classes
     {
         public void getClicked()
         {
-            Console.WriteLine("Clicked MacOS Button");
+            Console.WriteLine("MAC button is rendered");
         }
     }
 }

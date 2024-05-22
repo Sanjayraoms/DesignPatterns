@@ -11,7 +11,7 @@ namespace AbstractFactory.Classes
     {
         public void getChecked()
         {
-            Console.WriteLine("Checked Windows CheckBox");
+            Console.WriteLine("Windows Checkbox is rendered");
         }
     }
 }

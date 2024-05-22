@@ -7,11 +7,16 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory.Classes
 {
-    public class WindowsButton : IButton
+    public class LinuxOS : IGuiFactory
     {
-        public void getClicked()
+        public IButton CreateButton()
         {
-            Console.WriteLine("Windows button is rendered");
+            return new LinusOSButton();
+        }
+
+        public ICheckBox CreateCheckBox()
+        {
+            return new LinuxOSCheckBox();
         }
     }
 }

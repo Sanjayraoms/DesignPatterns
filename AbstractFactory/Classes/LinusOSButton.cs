@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory.Classes
 {
-    public class WindowsButton : IButton
+    public class LinusOSButton : IButton
     {
         public void getClicked()
         {
-            Console.WriteLine("Windows button is rendered");
+            Console.WriteLine("Linux button is rendered");
         }
     }
 }

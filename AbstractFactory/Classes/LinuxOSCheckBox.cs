@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory.Classes
 {
-    public class WindowsButton : IButton
+    public class LinuxOSCheckBox : ICheckBox
     {
-        public void getClicked()
+        public void getChecked()
         {
-            Console.WriteLine("Windows button is rendered");
+            Console.WriteLine("Linux Checkbox is rendered");
         }
     }
 }

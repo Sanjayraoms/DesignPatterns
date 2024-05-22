@@ -11,7 +11,7 @@ namespace AbstractFactory.Classes
     {
         public void getChecked()
         {
-            Console.WriteLine("Checked Mac CheckBox");
+            Console.WriteLine("MAC Checkbox is rendered");
         }
     }
 }
