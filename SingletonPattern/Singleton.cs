@@ -11,6 +11,8 @@ namespace SingletonPattern
     {
         private static Singleton singletonInstance;
 
+        public string Value { get; set; }
+
         public static readonly object SingletonLock = new object();
 
         private Singleton()
@@ -18,7 +20,7 @@ namespace SingletonPattern
 
         }
 
-        public static Singleton GetSingletonInstance()
+        public static Singleton GetSingletonInstance(string val)
         {
             if (singletonInstance == null)
             {
@@ -27,6 +29,7 @@ namespace SingletonPattern
                     if (singletonInstance == null)
                     {
                         singletonInstance = new Singleton();
+                        singletonInstance.Value = val;
                     }
                 }
             }
