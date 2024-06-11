@@ -29,7 +29,7 @@ namespace PrototypePattern.Shapes
 
         public override bool Equals(object? obj)
         {
-            if(obj is null) return false;
+            if(obj is not Rectangle) return false;
             Rectangle other = obj as Rectangle;
             return other.width == this.width && other.height == this.height;
         }

@@ -28,7 +28,7 @@ namespace PrototypePattern.Shapes
 
         public override bool Equals(object? obj)
         {
-            if(obj is null) return false;
+            if(obj is not Circle) return false;
             Circle other = obj as Circle;
             return other.radius == radius;
         }

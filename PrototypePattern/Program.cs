@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using PrototypePattern;
 using PrototypePattern.Shapes;
 
 Console.WriteLine("Hello, World!");
@@ -27,7 +28,25 @@ shapes.Add(rectangle);
 Rectangle rectangle2 = (Rectangle)rectangle.Clone();
 shapes.Add(rectangle);
 
-CloneandCompare(shapes, shapeCopy);
+//CloneandCompare(shapes, shapeCopy);
+
+PrototypeRegistry prototypeRegistry = new PrototypeRegistry();
+Shape s1 = prototypeRegistry.GetShape("Green Circle");
+Shape s2 = prototypeRegistry.GetShape("Red Rectangle");
+Shape s3 = prototypeRegistry.GetShape("Red Rectangle");
+
+if (s1!= s2 && !s1.Equals(s2))
+{
+	Console.WriteLine("Green Circle != Red Rectangle");
+}
+if (s2 != s3)
+{
+	Console.WriteLine("Objects are not the same");
+	if (s2.Equals(s3))
+	{
+		Console.WriteLine("But Objects are equal");
+	}
+}
 Console.ReadLine();
 
 static void CloneandCompare(List<Shape> shapes, List<Shape> shapesCopy)
