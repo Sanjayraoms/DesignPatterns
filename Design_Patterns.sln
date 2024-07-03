@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrototypePattern", "Prototy
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StructuralPatterns", "StructuralPatterns", "{93C8E077-172F-409C-BBC0-6FC08E1EC182}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterPattern", "AdapterPattern\AdapterPattern.csproj", "{06A712EF-DEA6-43F6-A8E7-344938D34BFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdapterPattern", "AdapterPattern\AdapterPattern.csproj", "{06A712EF-DEA6-43F6-A8E7-344938D34BFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgePattern", "BridgePattern\BridgePattern.csproj", "{D4716FB3-32E4-4112-91B5-AFAC559BE989}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BridgePattern", "BridgePattern\BridgePattern.csproj", "{D4716FB3-32E4-4112-91B5-AFAC559BE989}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLIDPrinciples", "SOLIDPrinciples\SOLIDPrinciples.csproj", "{2E13946B-718A-499E-B857-FD6C281D2A6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{D4716FB3-32E4-4112-91B5-AFAC559BE989}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4716FB3-32E4-4112-91B5-AFAC559BE989}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4716FB3-32E4-4112-91B5-AFAC559BE989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E13946B-718A-499E-B857-FD6C281D2A6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E13946B-718A-499E-B857-FD6C281D2A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E13946B-718A-499E-B857-FD6C281D2A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E13946B-718A-499E-B857-FD6C281D2A6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
