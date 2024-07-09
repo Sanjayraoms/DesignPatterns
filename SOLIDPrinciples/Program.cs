@@ -5,6 +5,7 @@ using SOLIDPrinciples.SingleResponsibility;
 using System.Diagnostics;
 using static System.Console;
 
+
 Console.WriteLine("Hello, World!");
 
 // Single Responsibility
