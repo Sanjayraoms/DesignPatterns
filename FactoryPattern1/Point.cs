@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace FactoryPattern1
 {
-    public class Point
+    public static class PointFactory
     {
-        private double x, y;
-
-        private Point(double x, double y)
+        public static Point NewPolarPoint(double rho, double theta)
         {
-            this.x = x;
-            this.y = y;
+            return new Point(rho * Math.Cos(theta), rho * Math.Sin(theta));
         }
 
         public static Point NewCartesianPoint(double x, double y)
@@ -21,9 +18,16 @@ namespace FactoryPattern1
             return new Point(x, y);
         }
 
-        public static Point NewPolarPoint(double rho, double theta)
+
+    }
+    public class Point
+    {
+        private double x, y;
+
+        public Point(double x, double y)
         {
-            return new Point(rho * Math.Cos(theta), rho * Math.Sin(theta));
+            this.x = x;
+            this.y = y;
         }
 
         public override string ToString()
