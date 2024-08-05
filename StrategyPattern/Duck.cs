@@ -27,5 +27,16 @@ namespace StrategyPattern
         {
             Console.WriteLine("All ducks can swim : Even Rubber and Decoy duck");
         }
+
+        public abstract void Display();
+        public void SetFlyBehavior(IFlyBehavior flyBehavior)
+        {
+            FlyBehavior = flyBehavior;
+        }
+
+        public void SetQuackBehavior(IQuackBehavior quackBehavior)
+        {
+            QuackBehavior = quackBehavior;
+        }
     }
 }
