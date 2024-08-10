@@ -23,10 +23,10 @@ namespace ObserverPattern.Subscribers
             Console.WriteLine($"Current Conditions : {temperature} F Degrees {humidity} % humidity ");
         }
 
-        public void Update(float temp, float humidity, float pressure)
+        public void Update()
         {
-            this.temperature = temp;
-            this.humidity = humidity;
+            this.temperature = weatherDataObject.getTemperature();
+            this.humidity = weatherDataObject.getHumidity();
             Display();
         }
     }

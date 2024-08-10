@@ -27,7 +27,7 @@ namespace ObserverPattern.Publisher
         {
             foreach (IObserver observer in observers)
             {
-                observer.Update(temperature, humidity, pressure);
+                observer.Update();
             }
         }
 
@@ -47,6 +47,21 @@ namespace ObserverPattern.Publisher
             this.humidity = humidity;
             this.pressure = pressure;
             measurementsChanged();
+        }
+
+        public float getTemperature()
+        {
+            return temperature;
+        }
+
+        public float getHumidity()
+        {
+            return humidity;
+        }
+
+        public float getPressure()
+        {
+            return pressure;
         }
     }
 }
