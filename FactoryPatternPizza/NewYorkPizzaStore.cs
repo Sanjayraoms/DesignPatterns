@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FactoryPatternPizza.Ingredients;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +9,18 @@ namespace FactoryPatternPizza
 {
     public class NewYorkPizzaStore : PizzaStore
     {
+        IIngredientFactory _ingredientFactory;
         public override Pizza CreatePizza(string type)
         {
             switch (type)
             {
-                case "Cheese": 
-                    return new NYCheesePizza();
+                case "Cheese":
+                    _ingredientFactory = new NyPizzaIngredients();
+                    return new NYCheesePizza(_ingredientFactory);
                     break;
                 default:
-                    return new NYCheesePizza();
+                    _ingredientFactory = new NyPizzaIngredients();
+                    return new NYCheesePizza(_ingredientFactory);
                     break;
             }
         }

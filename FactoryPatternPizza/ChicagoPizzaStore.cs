@@ -8,15 +8,18 @@ namespace FactoryPatternPizza
 {
     public class ChicagoPizzaStore : PizzaStore
     {
+        IIngredientFactory _ingredientFactory;
         public override Pizza CreatePizza(string type)
         {
             switch (type)
             {
                 case "Cheese":
-                    return new ChicagoCheesePizza();
+                    _ingredientFactory = new ChicagoIngredientFactory();
+                    return new ChicagoCheesePizza(_ingredientFactory);
                     break;
                 default:
-                    return new ChicagoCheesePizza();
+                    _ingredientFactory = new ChicagoIngredientFactory();
+                    return new ChicagoCheesePizza(_ingredientFactory);
                     break;
             }
         }

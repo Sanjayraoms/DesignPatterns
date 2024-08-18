@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FactoryPatternPizza.Ingredients;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,21 +10,12 @@ namespace FactoryPatternPizza
     public abstract class Pizza
     {
         protected string Name;
-        protected string Doug;
+        protected IDough Dough;
         protected List<string> Toppings;
-        protected string Sauce;
+        protected ISauce Sauce;
+        protected ICheese Cheese;
 
-        public void Prepare()
-        {
-            Console.WriteLine("Mix the Dough");
-            Console.WriteLine("Toss the dough");
-            Console.WriteLine($"Add sauce {Sauce}");
-            Console.WriteLine("Adding the Toppings : ");
-            foreach (var item in Toppings)
-            {
-                Console.WriteLine($"{item}, ");
-            }
-        }
+        public abstract void prepareIngredients();
 
         public void Bake()
         {

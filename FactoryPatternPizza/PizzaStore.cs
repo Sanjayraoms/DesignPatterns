@@ -12,8 +12,7 @@ namespace FactoryPatternPizza
         public Pizza OrderPizza(string type)
         {
             pizza = CreatePizza(type);
-
-            pizza.Prepare();
+            pizza.prepareIngredients();
             pizza.Bake();
             pizza.Cut();
             pizza.Box();
