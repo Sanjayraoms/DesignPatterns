@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace CommandPattern.Commands
 {
-    public class LightsOnCommand : ICommand
+    public class GarageDoorDownCommand : ICommand
     {
-        Light light;
+        Garage garage;
 
-        public LightsOnCommand(Light light)
+        public GarageDoorDownCommand(Garage garage)
         {
-            this.light = light;
+            this.garage = garage;
         }
 
         public void execute()
         {
-            light.on();
+            garage.doorDown();
         }
     }
 }

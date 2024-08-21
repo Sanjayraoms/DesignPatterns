@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace CommandPattern.Devices
 {
-    public class Light
+    public class CeilingFan
     {
         public string Place;
 
-        public Light(string place)
+        public CeilingFan(string place)
         {
             Place = place;
         }
 
         public void on()
         {
-            Console.WriteLine($"Light gets turned ON in {Place}");
+            Console.WriteLine($"Ceiling Fan turned ON at {Place}");
         }
 
         public void off()
         {
-            Console.WriteLine($"Light gets turned OFF in {Place}");
+            Console.WriteLine($"Ceiling Fan turned OFF at {Place}");
         }
     }
 }

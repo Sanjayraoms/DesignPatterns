@@ -7,18 +7,21 @@ using System.Threading.Tasks;
 
 namespace CommandPattern.Commands
 {
-    public class LightsOnCommand : ICommand
+    public class StereoOnwithCDCommand : ICommand
     {
-        Light light;
+        Stereo stereo;
 
-        public LightsOnCommand(Light light)
+        public StereoOnwithCDCommand(Stereo stereo)
         {
-            this.light = light;
+            this.stereo = stereo;
         }
 
         public void execute()
         {
-            light.on();
+            stereo.on();
+            stereo.setCD();
+            stereo.setVolume(12);
         }
+
     }
 }

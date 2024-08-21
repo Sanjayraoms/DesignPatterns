@@ -18,7 +18,7 @@ namespace CommandPattern.Commands
 
         public void execute()
         {
-            light.off(); []
+            light.off();
         }
     }
 }

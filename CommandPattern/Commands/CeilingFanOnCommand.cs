@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace CommandPattern.Commands
 {
-    public class LightsOnCommand : ICommand
+    public class CeilingFanOnCommand : ICommand
     {
-        Light light;
+        CeilingFan ceilingFan;
 
-        public LightsOnCommand(Light light)
+        public CeilingFanOnCommand(CeilingFan ceilingFan)
         {
-            this.light = light;
+            this.ceilingFan = ceilingFan;
         }
 
         public void execute()
         {
-            light.on();
+            ceilingFan.on();
         }
     }
 }
