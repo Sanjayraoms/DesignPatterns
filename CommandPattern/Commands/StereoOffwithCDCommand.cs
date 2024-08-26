@@ -20,5 +20,12 @@ namespace CommandPattern.Commands
         {
             stereo.off();
         }
+
+        public void undo()
+        {
+            stereo.on();
+            stereo.setCD();
+            stereo.setVolume(12);
+        }
     }
 }

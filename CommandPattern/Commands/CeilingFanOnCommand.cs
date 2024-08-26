@@ -20,5 +20,10 @@ namespace CommandPattern.Commands
         {
             ceilingFan.on();
         }
+
+        public void undo()
+        {
+            ceilingFan.off();
+        }
     }
 }

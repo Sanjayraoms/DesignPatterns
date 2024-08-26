@@ -23,5 +23,9 @@ namespace CommandPattern.Commands
             stereo.setVolume(12);
         }
 
+        public void undo()
+        {
+            stereo.off()
+        }
     }
 }

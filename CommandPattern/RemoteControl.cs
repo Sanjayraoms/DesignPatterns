@@ -8,8 +8,9 @@ namespace CommandPattern
 {
     public class RemoteControl
     {
-        ICommand?[] onCommands;
-        ICommand?[] offCommands;
+        ICommand[] onCommands;
+        ICommand[] offCommands;
+        ICommand undoCommand;
 
         public RemoteControl()
         {
@@ -20,11 +21,12 @@ namespace CommandPattern
             for (int i = 0; i < 7; i++)
             {
                 onCommands[i] = noCommand;
-                onCommands[i] = noCommand;
+                offCommands[i] = noCommand;
             }
+            undoCommand = noCommand;
         }
 
-        public void setCommand(int slot, ICommand onCommand, ICommand offCommand)
+        public void setCommand(int slot, ICommand? onCommand, ICommand? offCommand)
         {
             onCommands[slot] = onCommand;
             offCommands[slot] = offCommand;
@@ -33,12 +35,16 @@ namespace CommandPattern
         public void onButtonWasPushed(int slot)
         {
             onCommands[slot].execute();
+            undoCommand = onCommands[slot];
         }
 
         public void offButtonWasPushed(int slot)
         {
             offCommands[slot].execute();
+            undoCommand = offCommands[slot];
         }
+
+        public void undoButtonWasPushed() { undoCommand.execute(); }
 
         public override string ToString()
         {
@@ -46,7 +52,7 @@ namespace CommandPattern
             stringBuilder.Append("\n==========Remote Control============\n");
             for (int i = 0; i < onCommands.Length; i++)
             {
-                stringBuilder.Append($"[slot {i}] {onCommands[i].GetType().ToString()}    {offCommands[i].GetType().ToString()} \n");
+                stringBuilder.Append($"[slot {i}] {onCommands[i].GetType().Name}    {offCommands[i].GetType().Name} \n");
             }
             return stringBuilder.ToString();
         }

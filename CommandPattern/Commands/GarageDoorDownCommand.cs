@@ -20,5 +20,10 @@ namespace CommandPattern.Commands
         {
             garage.doorDown();
         }
+
+        public void undo()
+        {
+            garage.doorUp();
+        }
     }
 }
