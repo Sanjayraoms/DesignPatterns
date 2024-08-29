@@ -25,7 +25,7 @@ namespace CommandPattern.Commands
 
         public void undo()
         {
-            stereo.off()
+            stereo.off();
         }
     }
 }

@@ -12,5 +12,10 @@ namespace CommandPattern
         {
             Console.WriteLine("Empty Command");
         }
+
+        public void undo()
+        {
+            Console.WriteLine("Empty undo Command");
+        }
     }
 }

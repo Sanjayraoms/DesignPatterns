@@ -16,40 +16,57 @@ Stereo stereo =new Stereo();
 LightsOnCommand livingroomLightOn = new LightsOnCommand(livingRoomLight);
 LightsOffCommand livingroomLightOff = new LightsOffCommand(livingRoomLight);
 
-LightsOnCommand kitchenLightOn = new LightsOnCommand(kitchenLight);
-LightsOffCommand kitchenLightOff = new LightsOffCommand(kitchenLight);
+CeilingFanHighCommand ceilingFanHighCommand = new CeilingFanHighCommand(ceilingFanBedroom);
+CeilingFanOFFCommand ceilingFanOFFCommand = new CeilingFanOFFCommand(ceilingFanBedroom);
+CeilingFanMediumCommand ceilingFanMediumCommand = new CeilingFanMediumCommand(ceilingFanBedroom);
+CeilingFanLowCommand ceilingFanLowCommand = new CeilingFanLowCommand(ceilingFanBedroom);
 
-CeilingFanOnCommand ceilingFanRoomOn = new CeilingFanOnCommand(ceilingFanBedroom);
-CeilingFanOFFCommand ceilingFanRoomOff = new CeilingFanOFFCommand(ceilingFanBedroom);
+//LightsOnCommand kitchenLightOn = new LightsOnCommand(kitchenLight);
+//LightsOffCommand kitchenLightOff = new LightsOffCommand(kitchenLight);
 
-GarageDoorUpCommand garageDoorUp = new GarageDoorUpCommand(garageDoor);
-GarageDoorDownCommand garageDoorDown = new GarageDoorDownCommand(garageDoor);
+//CeilingFanOnCommand ceilingFanRoomOn = new CeilingFanOnCommand(ceilingFanBedroom);
+//CeilingFanOFFCommand ceilingFanRoomOff = new CeilingFanOFFCommand(ceilingFanBedroom);
 
-StereoOnwithCDCommand stereoOnCD = new StereoOnwithCDCommand(stereo);
-StereoOffwithCDCommand stereoOffCD = new StereoOffwithCDCommand(stereo);
+//GarageDoorUpCommand garageDoorUp = new GarageDoorUpCommand(garageDoor);
+//GarageDoorDownCommand garageDoorDown = new GarageDoorDownCommand(garageDoor);
+
+//StereoOnwithCDCommand stereoOnCD = new StereoOnwithCDCommand(stereo);
+//StereoOffwithCDCommand stereoOffCD = new StereoOffwithCDCommand(stereo);
 
 remoteControl.setCommand(0, livingroomLightOn, livingroomLightOff);
-remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
-remoteControl.setCommand(2, ceilingFanRoomOn, ceilingFanRoomOff);
-remoteControl.setCommand(3, garageDoorUp, garageDoorDown);
-remoteControl.setCommand(4, stereoOnCD, stereoOffCD);
+remoteControl.setCommand(1, ceilingFanHighCommand, ceilingFanOFFCommand);
+remoteControl.setCommand(2, ceilingFanMediumCommand, ceilingFanOFFCommand);
+remoteControl.setCommand(3, ceilingFanLowCommand, ceilingFanOFFCommand);
+
+//remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
+//remoteControl.setCommand(2, ceilingFanRoomOn, ceilingFanRoomOff);
+//remoteControl.setCommand(3, garageDoorUp, garageDoorDown);
+//remoteControl.setCommand(4, stereoOnCD, stereoOffCD);
+
 
 Console.WriteLine(remoteControl);
-
 remoteControl.onButtonWasPushed(0);
 remoteControl.offButtonWasPushed(0);
-
 remoteControl.onButtonWasPushed(1);
-remoteControl.offButtonWasPushed(1);
-
 remoteControl.onButtonWasPushed(2);
-remoteControl.offButtonWasPushed(2);
-
 remoteControl.onButtonWasPushed(3);
-remoteControl.offButtonWasPushed(3);
+remoteControl.undoButtonWasPushed();
+remoteControl.undoButtonWasPushed();
+remoteControl.undoButtonWasPushed();
+remoteControl.undoButtonWasPushed();
+remoteControl.undoButtonWasPushed();
 
-remoteControl.onButtonWasPushed(4);
-remoteControl.offButtonWasPushed(4);
+//remoteControl.onButtonWasPushed(1);
+//remoteControl.offButtonWasPushed(1);
+
+//remoteControl.onButtonWasPushed(2);
+//remoteControl.offButtonWasPushed(2);
+
+//remoteControl.onButtonWasPushed(3);
+//remoteControl.offButtonWasPushed(3);
+
+//remoteControl.onButtonWasPushed(4);
+//remoteControl.offButtonWasPushed(4);
 
 
 

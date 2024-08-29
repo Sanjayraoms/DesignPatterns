@@ -10,7 +10,7 @@ namespace CommandPattern
     {
         ICommand[] onCommands;
         ICommand[] offCommands;
-        ICommand undoCommand;
+        Stack<ICommand> undoCommand;
 
         public RemoteControl()
         {
@@ -23,7 +23,7 @@ namespace CommandPattern
                 onCommands[i] = noCommand;
                 offCommands[i] = noCommand;
             }
-            undoCommand = noCommand;
+            undoCommand = new Stack<ICommand>();
         }
 
         public void setCommand(int slot, ICommand? onCommand, ICommand? offCommand)
@@ -35,16 +35,20 @@ namespace CommandPattern
         public void onButtonWasPushed(int slot)
         {
             onCommands[slot].execute();
-            undoCommand = onCommands[slot];
+            undoCommand.Push(onCommands[slot]);
         }
 
         public void offButtonWasPushed(int slot)
         {
             offCommands[slot].execute();
-            undoCommand = offCommands[slot];
+            undoCommand.Push(offCommands[slot]);
         }
 
-        public void undoButtonWasPushed() { undoCommand.execute(); }
+        public void undoButtonWasPushed() 
+        {
+            var prevCommand = undoCommand.Pop();
+            prevCommand.undo(); 
+        }
 
         public override string ToString()
         {
