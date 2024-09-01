@@ -24,5 +24,10 @@ namespace CommandPattern.Devices
         {
             Console.WriteLine($"Light gets turned OFF in {Place}");
         }
+
+        public void dim()
+        {
+            Console.WriteLine($"Light gets dimmed for party mode in {Place}");
+        }
     }
 }
