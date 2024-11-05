@@ -11,23 +11,32 @@ namespace IteratorPattern
     {
         IMenu pancakemenu;
         IMenu dinerMenu;
+        IMenu cafeMenu;
 
-        public Waitress(IMenu pancakemenu, IMenu dinerMenu)
+        public Waitress(IMenu pancakemenu, IMenu dinerMenu, IMenu cafeMenu)
         {
             this.pancakemenu = pancakemenu;
             this.dinerMenu = dinerMenu;
+            this.cafeMenu = cafeMenu;
         }
 
         public void PrintMenu()
         {
             IEnumerator<MenuItem> pancakeMenuIterator = pancakemenu.GetIterator();
             IEnumerator<MenuItem> dinerManuIterator = dinerMenu.GetIterator();
+            IEnumerator<MenuItem> cafeMenuIterator = cafeMenu.GetIterator();
 
             Console.WriteLine("Breakfast Items");
             PrintMenu(pancakeMenuIterator);
+            Console.WriteLine("============================================================== \n");
 
             Console.WriteLine("Dinner Items");
             PrintMenu(dinerManuIterator);
+            Console.WriteLine("============================================================== \n");
+
+            Console.WriteLine("Cafe Items");
+            PrintMenu(cafeMenuIterator);
+
         }
 
         private void PrintMenu(IEnumerator<MenuItem> iterator)
