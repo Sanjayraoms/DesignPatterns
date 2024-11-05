@@ -7,6 +7,11 @@ var dinerMenu = new DinerMenu();
 
 var cafeMenu = new CafeMenu();
 
-Waitress waitress = new Waitress(pancakeHouseMenu, dinerMenu, cafeMenu);
+List<IMenu> menus = new List<IMenu>();
+menus.Add(pancakeHouseMenu);
+menus.Add(dinerMenu);
+menus.Add(cafeMenu);
+
+Waitress waitress = new Waitress(menus);
 
 waitress.PrintMenu();
